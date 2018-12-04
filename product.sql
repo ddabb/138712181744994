@@ -35,6 +35,9 @@ INSERT INTO [dbo].[base1]
 		   (1,3,0,4),
 		   (2,2,0,4),
 		   (2,0,2,4),
+		   (2,1,1,4),
+		   (1,1,2,4),
+		   (1,2,1,4),
 		   (0,2,2,4);
 GO
 
@@ -145,8 +148,3 @@ update result set group1Count= (select count(1) from cardgroup1  where group1_pl
 update result set	  product=group1Count*group2Count*group3Count
 --计算出最终结果
 select sum(product) as 总组合数 from result
-
-
-
-
-
