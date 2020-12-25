@@ -1,11 +1,4 @@
-GO
 
-/****** Object:  Table [dbo].[base1]    Script Date: 2018/12/2 星期日 下午 11:10:22 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 --创建存储普通牌A-K的可能组合的表base1
 CREATE TABLE [dbo].[base1](
 	[player1] [decimal](18, 0) NULL,
@@ -14,9 +7,7 @@ CREATE TABLE [dbo].[base1](
 	[allCount] [decimal](18, 0) NULL
 ) ON [PRIMARY]
 
-GO
 
-GO
 --插入普通4张相同牌--例如4个3在每个玩家手中的可能组合。
 INSERT INTO [dbo].[base1]
            ([player1]
@@ -39,16 +30,7 @@ INSERT INTO [dbo].[base1]
 		   (1,1,2,4),
 		   (1,2,1,4),
 		   (0,2,2,4);
-GO
 
-GO
-
-/****** Object:  Table [dbo].[base2]    Script Date: 2018/12/2 星期日 下午 11:10:39 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 --存储大小王可能组合的表base2
 CREATE TABLE [dbo].[base2](
@@ -58,12 +40,6 @@ CREATE TABLE [dbo].[base2](
 	[allCount] [decimal](18, 0) NULL
 ) ON [PRIMARY]
 
-GO
-
-
-GO
-
-GO
 --插入大王或者小王在每个玩家手中的组合情况。
 INSERT INTO [dbo].[base2]
            ([player1]
@@ -74,7 +50,6 @@ INSERT INTO [dbo].[base2]
            (0,0,1,1),
 		   (0,1,0,1),
 		   (1,0,0,1);
-GO
 
 --将手牌3~7 的所有可能组合存储于cardgroup1,默认地主是player1。
 --条件2的意思就是4个3，4，5，6，7加起来20张牌不可能全部都在玩家二(player2)手中
